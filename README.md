@@ -2,67 +2,57 @@
 
 Projeto de testes automatizados no site da Steam usando Python e Selenium.
 
-## Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
+```
 steam_tests/
-├── tests/ # Testes (performance, funcional, UI, API)
-├── utils/ # Funções e utilitários
-├── config/ # Configurações
-└── reports/ # Relatórios
+├── tests/         # Testes (performance, funcional, UI, API)
+├── utils/         # Funções e utilitários
+├── config/        # Configurações
+└── reports/       # Relatórios
+```
 
-bash
-Copiar
-Editar
-
-## Como Usar
+## ⚙️ Como Usar
 
 1. Criar ambiente virtual:
 ```bash
 python -m venv venv
 source venv/bin/activate  # No Windows: venv\Scripts\activate
-Instalar dependências:
+```
 
-bash
-Copiar
-Editar
+2. Instalar dependências:
+```bash
 pip install -r requirements.txt
-Configurar .env:
+```
 
-ini
-Copiar
-Editar
+3. Configurar `.env`:
+```
 STEAM_URL=https://store.steampowered.com
-Executar Testes
-Performance:
+```
 
-bash
-Copiar
-Editar
+## ▶️ Executar Testes
+
+### Performance
+```bash
 locust -f tests/performance/locustfile.py  
 pytest tests/performance/test_stress.py
-Funcionais:
+```
 
-bash
-Copiar
-Editar
+### Funcionais
+```bash
 pytest tests/functional/
-UI:
+```
 
-bash
-Copiar
-Editar
+### UI
+```bash
 pytest tests/ui/
-API:
+```
 
-bash
-Copiar
-Editar
+### API
+```bash
 pytest tests/api/
-Relatórios
-Relatórios de testes são gerados na pasta reports após a execução.
+```
 
-perl
-Copiar
-Editar
+## 📊 Relatórios
 
-Se quiser que já venha com a formatação de Markdown visível no preview do GitHub, posso ajustar também.
+Relatórios de testes são gerados na pasta `reports` após a execução.
