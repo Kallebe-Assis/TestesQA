@@ -1,65 +1,68 @@
-# Steam Website Test Suite
+# Testes Automatizados - Site da Steam
 
-This project contains various types of automated tests for the Steam website using Python and Selenium.
+Projeto de testes automatizados no site da Steam usando Python e Selenium.
 
-## Project Structure
+## Estrutura do Projeto
 
-```
 steam_tests/
-├── tests/
-│   ├── performance/         # Load, stress, and endurance tests
-│   ├── functional/          # Functional test cases
-│   ├── ui/                  # UI test cases
-│   └── api/                 # API test cases
-├── utils/                   # Utility functions and helpers
-├── config/                  # Configuration files
-└── reports/                 # Test reports
-```
+├── tests/ # Testes (performance, funcional, UI, API)
+├── utils/ # Funções e utilitários
+├── config/ # Configurações
+└── reports/ # Relatórios
 
-## Setup
+bash
+Copiar
+Editar
 
-1. Create a virtual environment:
+## Como Usar
+
+1. Criar ambiente virtual:
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
+source venv/bin/activate  # No Windows: venv\Scripts\activate
+Instalar dependências:
 
-2. Install dependencies:
-```bash
+bash
+Copiar
+Editar
 pip install -r requirements.txt
-```
+Configurar .env:
 
-3. Configure environment variables in `.env` file:
-```
+ini
+Copiar
+Editar
 STEAM_URL=https://store.steampowered.com
-```
+Executar Testes
+Performance:
 
-## Running Tests
-
-### Performance Tests
-```bash
-# Run Locust load tests
-locust -f tests/performance/locustfile.py
-
-# Run stress tests
+bash
+Copiar
+Editar
+locust -f tests/performance/locustfile.py  
 pytest tests/performance/test_stress.py
-```
+Funcionais:
 
-### Functional Tests
-```bash
+bash
+Copiar
+Editar
 pytest tests/functional/
-```
+UI:
 
-### UI Tests
-```bash
+bash
+Copiar
+Editar
 pytest tests/ui/
-```
+API:
 
-### API Tests
-```bash
+bash
+Copiar
+Editar
 pytest tests/api/
-```
+Relatórios
+Relatórios de testes são gerados na pasta reports após a execução.
 
-## Test Reports
+perl
+Copiar
+Editar
 
-Test reports are generated in the `reports` directory after test execution. 
+Se quiser que já venha com a formatação de Markdown visível no preview do GitHub, posso ajustar também.
